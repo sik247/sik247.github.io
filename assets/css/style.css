@@ -882,6 +882,8 @@ main {
   margin-bottom: 25px;
 }
 
+
+
 .filter-select {
   background: var(--eerie-black-2);
   color: var(--light-gray);
@@ -1872,7 +1874,9 @@ textarea.form-input::-webkit-resizer { display: none; }
   .social-list { justify-content: center; }
 
 
-
+  .timeline-item h6 {
+    color: white;
+}
   /**
 	 * RESUME
 	 */
