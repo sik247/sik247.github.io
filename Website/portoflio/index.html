@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vCard - Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css linkr
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Sang In Kang" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Sang In Kang">Sang In Kang</h1>
+
+          <p class="title">Software Engineer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:sik247@nyu.edu" class="contact-link">sik247@nyu.edu</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+8582144035" class="contact-link">+1 8582144035</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1995-10-24">OCT 24, 1995</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Manhattan, NY</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+      
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Hello! I'm a software engineer with a strong foundation in Computer Science and Economics, proudly holding a Bachelor's degree from New York University. 
+            My time at NYU equipped me with a comprehensive understanding of both the technical and financial aspects of the industry. During my academic journey, 
+            I immersed myself in coursework spanning Operating Systems, Algorithms & Data Structures, and Software Engineering, honing my skills and preparing for real-world challenges. This robust education forms the backbone of my ability to approach complex financial projects with a strategic and technical mindset.
+
+            My hands-on experience at NYU, coupled with my interest in finance, led me to contribute to impactful projects. For instance, at Veritas Asset Management, I played a pivotal role as a Software Engineer, developing and implementing a dynamic algorithm for short-term trading in the EUR/USD currency pair. This project not only showcased my proficiency in Python and Java but also demonstrated my ability to design and execute financial solutions.
+
+My NYU education has been pivotal in shaping my analytical thinking and problem-solving abilities, providing a strong foundation for navigating the intricate landscape of financial technology. I am excited to leverage this background, combined with my hands-on experience, to continue driving innovation in finance through software engineering
+          </p>
+
+    
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">Check Out My Projects</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Algorithimic Trading</h4>
+
+                <p class="service-item-text">
+                  This is my journey into the world of algorithmic trading. I am currentley working with Python and Deep Learning Frameeworks such as Tensorflow, Keras, and Pytorch to develop a trading bot that can predict stock prices.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Smoothed Particle Hydrodynamics</h4>
+
+                <p class="service-item-text">
+                  I am currentley a research assistant for Professor Kayar at NYU. I am working on a project that involves using SPH to simulate the behavior of fluids(C++ and CUDA)
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">iOS Development</h4>
+
+                <p class="service-item-text">
+                  Check out my iOS Development journey with CodePath! 
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">School Projects</h4>
+
+                <p class="service-item-text">
+                  Check out my a variety of my school projects from NYU. 
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="Certificates">
+
+          <h3 class="h3 testimonials-title">Certificates</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="assets/images/microsoft.png" alt="Career Essentials in Generative AI by Microsoft and Linkedin" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Career Essentials in Generative AI by Microsoft and Linkedin</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="assets/images/microsoft.png" alt="Career Essentials in Project Management by Microsoft and Linkedin" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Career Essentials in Project Management by Microsoft and Linkedin</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+
+
+          </ul>
+
+        </section>
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  EDIT
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+      </article>
+
+        <!--
+          - testimonials modal
+        -->
+
+       
+
+    
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+          <a href="https://acrobat.adobe.com/link/track?uri=urn:aaid:scds:US:bd5d0e46-662e-3955-9904-1bb8a8f6c1f8" download style="color: white;">Download full resume here</a>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">NYU</h4>
+
+              <span>Graduation: May 2024</span>
+
+              <p class="timeline-text">
+                Major: Computer Science(CAS) <br>
+                Minor: Business Studies(Stern) <br>
+                GPA: 3.7/4.0 
+                
+                
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Yonsei University</h4>
+
+              <span>2016</span>
+
+              <p class="timeline-text">
+                Visitng Student (Business Studies) <br>
+                Coursework: Corporate Finance, Financial Accounting, and International Business
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">La Jolla Country Day School</h4>
+
+              <span>2006 - 2014</span>
+
+              <p class="timeline-text">
+                
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">New York University </h4>
+              <h4 class="h4 timeline-item-title">Research Assistant</h4>
+              <span>May 2023 — Present</span>
+
+              <p class="timeline-text">
+                • Pioneered the resolution of intricate challenges related to fluid-fluid and fluid-solid interactions using C++ and OpenGL, achieving
+a significant 20% enhancement in fluid realism through advanced graphic simulations. <br>
+• Engineered and implemented a highly efficient neighborhood search algorithm in C++ to optimize particle simulations, addressing
+the challenge of identifying nearby particles within a specified interaction radius.<br>
+
+• Leveraged advanced data structures, including spatial hashing and grid-based indexing, to streamline the process of locating
+neighboring particles, significantly improving the algorithm's runtime efficiency.
+                
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">iDTech</h4>
+              <h4 class="h4 timeline-item-title">Instructor of AI/ML</h4>
+
+
+              <span>2023 May - 2023 August</span>
+
+              <p class="timeline-text">
+                • Spearheaded Machine Learning (ML) and Artificial Intelligence (AI) instruction for a diverse cohort of 100+ students, leading
+projects focused on the recognition of handwritten digits using Convolutional Neural Networks (CNNs) on the MNIST dataset.<br>
+• Integrated TensorFlow and PyTorch extensively in data preparation, model creation, and evaluation, emphasizing a practical
+approach to align with industry standards.<br>
+• Introduced students to NLP concepts through a dedicated text analysis project utilizing TensorFlow to create and train recurrent
+neural networks (RNNs) and transformers, applying these models to tasks such as text classification and sentiment analysis.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">New York Wealth Planning Group</h4>
+              <h4 class="h4 timeline-item-title">Contractor</h4>
+
+              <span>Nov 2023 - Dec 2023</span>
+
+              <p class="timeline-text">
+                • Implemented and optimized strategies to leverage the network effect, resulting in a 15% increase in customer referrals and brand
+visibility in the healthcare department.<br>
+• Utilized advanced data analysis techniques such as regression analysis for predictive modeling and customer segmentation for
+market analysis cementing the firm as the #1 General Agent for UnitedHealthcare in 2022
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Python</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">TensorFlow</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Deep Learning Models in Finance</h5>
+                <data value="90">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">SQL</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Python</button>
+
+            <li class="filter-item">
+              <button data-filter-btn>C/C++</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Java</button>
+            </li>
+            
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Python</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>C++</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Java</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="assets/images/github.png" alt = "orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">EURO/USD Stop Loss Model - HFT</h3>
+
+                <p class="project-category">Python</p>
+                <a href="https://github.com/sik247/Algorithimic_Trading-Python-/tree/main/Strategies/EuroUSD_AutomatedTrading" target="_blank">View on GitHub</a>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="assets/images/github.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Equal Weight Portfolio</h3>
+
+                <p class="project-category">Python</p>
+                <a href="https://github.com/sik247/Algorithimic_Trading-Python-/blob/main/Strategies/EqualWeight/equalweightS%26P.ipynb" target="_blank">View on GitHub</a>
+
+
+              </a>
+            </li>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Medium Articles</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="https://medium.com/@sik247/generative-ai-in-management-consulting-revolutionizing-decision-making-and-client-services-2839df9b84d3">
+
+                <figure class="blog-banner-box">
+                  <img src="assets/images/blog.png" alt="Generative AI in Management Consulting: Revolutionizing Decision-Making and Client Services" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Tech Consulting</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Nov 15, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Generative AI in Management Consulting: Revolutionizing Decision-Making and Client Services</h3>
+
+                  <p class="blog-text">
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="assets/images/blog.png" alt="AI-Driven Decision Support Systems in Managerial Consulting: Navigating the Future of Strategic Insights" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Tech Conlsulting</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Nov 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">AI-Driven Decision Support Systems in Managerial Consulting: Navigating the Future of Strategic Insights</h3>
+
+                  <p class="blog-text">
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
