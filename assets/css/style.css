@@ -4,7 +4,7 @@
 
 
 /**
- * copyright 2022 @codewithsadee
+ *  
  */
 
 
@@ -110,6 +110,8 @@
   --transition-2: 0.5s ease-in-out;
 
 }
+
+
 
 
 
@@ -1883,4 +1885,18 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+
+/* Add your new rules here */
+
+.coursework {
+  color: #000000; /* Change this to the color you want for the text */
+  background-color: #ffffff; /* Change this to the color you want for the background */
+  padding: 20px; /* Adds some space around the text */
+}
+
+.coursework-item-title {
+  color: #000000; /* Change this to the color you want for the text */
+  background-color: #ffffff; /* Change this to the color you want for the background */
+  padding: 5px; /* Adds some space around the text */
 }
