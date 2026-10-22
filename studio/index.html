@@ -3,481 +3,334 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>HKx AI Studio · K-뷰티 AI 크리에이티브</title>
-<meta name="description" content="촬영 없이 팔리는 비주얼. 화장품 AI 연출컷 · 모델컷 · 상세페이지 · 광고소재 · AI 광고 숏폼. NYU 컴퓨터공학(AI), CES 수상 3회.">
-<meta property="og:title" content="HKx AI Studio · K-뷰티 AI 크리에이티브">
-<meta property="og:description" content="촬영 없이, 팔리는 비주얼. 화장품 연출컷 · 상세페이지 · 광고소재 · 숏폼">
-<meta property="og:image" content="assets/img/kb_hero_lineup.png">
+<title>HKx AI Studio · 진짜 같은 AI 비주얼</title>
+<meta name="description" content="촬영 없이 만드는 실사급 AI 비주얼. K-뷰티 연출컷 · 상세페이지 · 광고소재 · AI 광고 숏폼. NYU 컴퓨터공학(AI), CES 수상 3회.">
+<meta property="og:title" content="HKx AI Studio">
+<meta property="og:description" content="촬영 없이 만드는 실사급 AI 비주얼">
+<meta property="og:image" content="assets/img/hero.jpg">
 <link rel="icon" type="image/png" href="/hkx-logo.png">
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 <style>
-:root{
-  --ivory:#FAF6F1; --paper:#F3ECE4; --blush:#EBCFC6; --rose:#C98F82; --cocoa:#2A211C; --ink:#3d332d; --mute:#8a7d74; --line:#e5dcd2;
-  --sage:#8FA58B; --night:#14110f; --night2:#1d1916; --lime:#D7FF3A; --r:20px;
-}
+:root{--ink:#141110;--ink2:#2a2421;--paper:#f7f3ee;--sand:#ece5dd;--mute:#857a72;--line:#e2d9cf;--accent:#a5786b;--r:18px}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--ivory);color:var(--cocoa);font-family:"Pretendard Variable",Pretendard,-apple-system,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
-img,video{display:block;max-width:100%}
+body{font-family:"Pretendard Variable",Pretendard,-apple-system,sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6;letter-spacing:-.2px}
+img,video{display:block;width:100%}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1220px;margin:0 auto;padding:0 28px}
-.serif{font-family:"Noto Serif KR",serif}
-.tg .n,.hl3 .n,.steps>div:before,.dp .pt b,.dp .how b{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1}
-.tg .n{font-family:"Noto Serif KR",serif!important;font-weight:600;font-size:40px!important}
-.it{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500}
+.w{max-width:1280px;margin:0 auto;padding:0 32px}
+.k{font-size:12px;letter-spacing:5px;font-weight:700;text-transform:uppercase;color:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 26px;border-radius:999px;font-weight:700;font-size:15px;transition:.25s}
+.btn.solid{background:var(--ink);color:#fff}.btn.solid:hover{background:#000;transform:translateY(-2px)}
+.btn.ghost{border:1px solid rgba(255,255,255,.55);color:#fff}.btn.ghost:hover{background:#fff;color:var(--ink)}
+.btn.line{border:1px solid var(--ink)}.btn.line:hover{background:var(--ink);color:#fff}
 
 /* nav */
-nav{position:sticky;top:0;z-index:50;background:rgba(250,246,241,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:20px}
-.logo{font-weight:800;font-size:18px;letter-spacing:.3px;white-space:nowrap}
-.logo span{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:600;font-size:21px;color:var(--rose);margin-left:4px}
-.menu{display:flex;gap:24px;font-size:14.5px;color:var(--mute)}
-.menu a:hover{color:var(--cocoa)}
-.menu .back{color:var(--rose);font-weight:600}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;font-weight:700;font-size:15px;transition:.2s;white-space:nowrap}
-.btn.dark{background:var(--cocoa);color:var(--ivory)}
-.btn.dark:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(42,33,28,.25)}
-.btn.line{border:1px solid var(--cocoa)}
-.btn.line:hover{background:var(--cocoa);color:var(--ivory)}
-@media(max-width:980px){.menu{display:none}}
+nav{position:fixed;inset:0 0 auto 0;z-index:60;transition:.3s}
+nav .w{height:76px;display:flex;align-items:center;justify-content:space-between}
+nav .logo{font-weight:800;font-size:18px;letter-spacing:.5px;color:#fff}
+nav .logo b{font-weight:300}
+nav .m{display:flex;gap:30px;font-size:14px;color:rgba(255,255,255,.85)}
+nav .m a:hover{color:#fff}
+nav .btn{height:42px;font-size:14px;background:#fff;color:var(--ink)}
+nav.s{background:rgba(247,243,238,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+nav.s .logo,nav.s .m{color:var(--ink)}nav.s .m a{color:var(--mute)}nav.s .m a:hover{color:var(--ink)}
+nav.s .btn{background:var(--ink);color:#fff}
+@media(max-width:960px){nav .m{display:none}}
 
 /* hero */
-.hero{padding:80px 0 90px;position:relative;overflow:hidden}
-.hero:before{content:"";position:absolute;right:-180px;top:-160px;width:720px;height:720px;border-radius:50%;background:radial-gradient(closest-side,rgba(235,207,198,.75),transparent);z-index:0}
-.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;position:relative;z-index:1}
-.kicker{display:inline-flex;gap:10px;align-items:center;font-size:13px;font-weight:700;letter-spacing:3px;color:var(--rose);text-transform:uppercase}
-.kicker:before{content:"";width:30px;height:1px;background:var(--rose)}
-.hero h1{font-family:"Noto Serif KR",serif;font-weight:700;font-size:clamp(44px,6vw,80px);line-height:1.12;letter-spacing:-2px;margin:22px 0 24px}
-.hero h1 .ko{color:var(--rose)}
-.hero .lead{font-size:18px;color:var(--ink);max-width:560px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 34px}
-.chip{padding:8px 15px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:13.5px;font-weight:600}
-.chip b{color:var(--rose)}
-.cta{display:flex;gap:12px;flex-wrap:wrap}
-.collage{position:relative;height:600px}
-.collage .c{position:absolute;border-radius:18px;overflow:hidden;box-shadow:0 30px 60px rgba(60,40,30,.18)}
-.collage .c img,.collage .c video{width:100%;height:100%;object-fit:cover}
-.collage .c1{left:0;top:30px;width:58%;height:78%}
-.collage .c2{right:0;top:0;width:40%;height:46%}
-.collage .c3{right:4%;bottom:0;width:36%;height:48%}
-.collage .tag{position:absolute;left:-14px;bottom:70px;background:#fff;border-radius:14px;padding:12px 16px;box-shadow:0 16px 40px rgba(60,40,30,.18);font-size:13px;line-height:1.4}
-.collage .tag b{display:block;font-size:15px}
-@media(max-width:980px){.hero .wrap{grid-template-columns:1fr}.collage{height:460px}}
+.hero{position:relative;height:100vh;min-height:720px;max-height:1000px;overflow:hidden;color:#fff;background:#1a1512}
+.hero .bg{position:absolute;inset:0;background:url(assets/img/hero.jpg) 72% 62%/cover;transform:scale(1.04);animation:z 14s ease-out forwards}
+@keyframes z{to{transform:scale(1)}}
+.hero .ov{position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,11,10,.82) 0%,rgba(14,11,10,.45) 42%,rgba(14,11,10,0) 70%),linear-gradient(0deg,rgba(14,11,10,.5),transparent 35%)}
+.hero .w{position:relative;height:100%;display:flex;flex-direction:column;justify-content:center}
+.hero .k{color:#e3c3b6}
+.hero h1{font-size:clamp(46px,6.6vw,96px);line-height:1.06;font-weight:800;letter-spacing:-3.5px;margin:24px 0 26px}
+.hero h1 span{font-weight:200}
+.hero p{font-size:19px;max-width:520px;color:rgba(255,255,255,.82)}
+.hero .cta{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap}
+.hero .cred{position:absolute;left:32px;right:32px;bottom:34px;display:flex;gap:34px;flex-wrap:wrap;font-size:13px;color:rgba(255,255,255,.75);letter-spacing:.3px}
+.hero .cred b{color:#fff;font-weight:700;margin-right:6px}
+.hero .note{position:absolute;right:32px;bottom:34px;font-size:12px;color:rgba(255,255,255,.6)}
 
-/* trend */
-.trend{background:var(--cocoa);color:var(--ivory);padding:70px 0}
-.trend h2{font-family:"Noto Serif KR",serif;font-weight:600;font-size:30px;margin-bottom:6px}
-.trend .sub{color:#c9bcb2;font-size:15px;margin-bottom:34px}
-.tg{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.tg>div{border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:22px}
-.tg .n{font-family:"Cormorant Garamond",serif;font-size:46px;line-height:1;color:var(--blush)}
-.tg .t{font-weight:700;margin:10px 0 6px}
-.tg .d{font-size:13.5px;color:#c9bcb2}
-.trend .src{font-size:12px;color:#9c8f86;margin-top:18px}
-@media(max-width:900px){.tg{grid-template-columns:1fr 1fr}}
+/* section heads */
+section{padding:130px 0}
+.sh{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:56px}
+.sh h2{font-size:clamp(34px,4.4vw,60px);line-height:1.1;font-weight:800;letter-spacing:-2.4px;margin-top:16px}
+.sh h2 span{font-weight:200}
+.sh p{color:var(--mute);font-size:17px;max-width:480px;justify-self:end}
+@media(max-width:860px){.sh{grid-template-columns:1fr}.sh p{justify-self:start}}
 
-/* sections */
-section{padding:110px 0}
-.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:46px;flex-wrap:wrap}
-.sh .no{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:22px;color:var(--rose);display:block;margin-bottom:8px}
-.sh h2{font-family:"Noto Serif KR",serif;font-weight:700;font-size:clamp(32px,4.2vw,52px);line-height:1.18;letter-spacing:-1.2px}
-.sh h2 em{font-style:normal;color:var(--rose)}
-.sh p{color:var(--mute);max-width:450px;font-size:16px}
+/* work grid */
+.work{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.work figure{position:relative;overflow:hidden;border-radius:var(--r);background:var(--sand);cursor:zoom-in}
+.work img{height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.work figure:hover img{transform:scale(1.04)}
+.work figcaption{position:absolute;left:18px;bottom:16px;right:18px;display:flex;justify-content:space-between;align-items:center;color:#fff;font-size:13px;font-weight:600;opacity:0;transform:translateY(8px);transition:.35s}
+.work figure:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.55),transparent 45%);opacity:0;transition:.35s}
+.work figure:hover figcaption,.work figure:hover:after{opacity:1;transform:none}
+.work figcaption{z-index:2}
+.work figcaption span{background:rgba(255,255,255,.18);backdrop-filter:blur(6px);padding:5px 11px;border-radius:99px;font-size:11.5px}
+.c7{grid-column:span 7;height:520px}.c5{grid-column:span 5;height:520px}.c4{grid-column:span 4;height:400px}.c6{grid-column:span 6;height:460px}.c8{grid-column:span 8;height:460px}
+@media(max-width:860px){.work>figure{grid-column:span 12!important;height:340px!important}}
 
+.camp{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;margin-bottom:60px}.camp .big{border-radius:18px;overflow:hidden;height:640px;position:relative;cursor:zoom-in}.camp .big img{height:100%;object-fit:cover}.camp .big .t{position:absolute;left:28px;bottom:26px;color:#fff;text-shadow:0 2px 20px rgba(0,0,0,.5)}.camp .big .t h3{font-size:40px;font-weight:800;letter-spacing:-1.5px}.camp .big .t p{font-size:14px;opacity:.85}.camp .side{display:grid;grid-template-rows:auto 250px 1fr;gap:16px;height:640px}.camp .info{border-radius:18px;padding:26px;border:1px solid var(--line);background:#fff}.camp .info .pal{display:flex;gap:6px;margin-top:14px}.camp .info .pal i{width:38px;height:22px;border-radius:5px;border:1px solid rgba(0,0,0,.08)}.camp .info .mood{font-size:13px;color:var(--mute);margin-top:8px}.camp .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}.camp .two img,.camp .one img{border-radius:18px;height:100%;object-fit:cover;cursor:zoom-in}.camp .two,.camp .one{min-height:0;overflow:hidden}.camp .one{border-radius:18px}@media(max-width:900px){.camp{grid-template-columns:1fr}.camp .big{height:420px}}
+.bb{display:grid;grid-template-columns:1fr 1fr;gap:22px}.bb .card{border-radius:18px;overflow:hidden;background:#fff;border:1px solid var(--line)}.bb .mos{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:200px 200px;gap:6px}.bb .mos img{width:100%;height:100%;object-fit:cover;cursor:zoom-in}.bb .mos img:first-child{grid-row:span 2}.bb .mos img:nth-child(4){grid-column:span 2}.bb .meta{display:flex;justify-content:space-between;align-items:flex-end;padding:20px 24px 22px}.bb .meta h3{font-size:26px;font-weight:800;letter-spacing:-1px}.bb .meta p{font-size:14px;color:var(--mute);margin-top:4px}.bb .meta .pal{display:flex;gap:5px}.bb .meta .pal i{width:22px;height:22px;border-radius:50%;border:1px solid rgba(0,0,0,.08)}@media(max-width:900px){.bb{grid-template-columns:1fr}.bb .mos{grid-template-rows:150px 150px}}
 /* services */
-.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.svc a{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:.25s}
-.svc a:hover{transform:translateY(-5px);box-shadow:0 22px 50px rgba(60,40,30,.12)}
-.svc .th{aspect-ratio:4/3;overflow:hidden;background:var(--paper)}
-.svc .th img{width:100%;height:100%;object-fit:cover;transition:.5s}
-.svc a:hover .th img{transform:scale(1.05)}
-.svc .bd{padding:18px 20px 22px;flex:1;display:flex;flex-direction:column}
-.svc .new{align-self:flex-start;font-size:11px;font-weight:800;letter-spacing:1px;color:#fff;background:var(--rose);padding:3px 9px;border-radius:99px;margin-bottom:8px}
-.svc h3{font-size:18px;margin-bottom:4px}
-.svc .d{font-size:13.5px;color:var(--mute);flex:1}
-.svc .p{margin-top:12px;font-weight:700;font-size:14px}
-.svc a.wide{grid-column:span 2}
-.svc a.wide .th{aspect-ratio:8/3}
-@media(max-width:1000px){.svc{grid-template-columns:1fr 1fr}.svc a.wide{grid-column:span 2}}
-@media(max-width:560px){.svc{grid-template-columns:1fr}.svc a.wide{grid-column:span 1}}
+.svcs{background:#fff}
+.sv{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.sv a{display:block}
+.sv .im{border-radius:14px;overflow:hidden;aspect-ratio:4/3;background:var(--sand)}
+.sv .im img{height:100%;object-fit:cover;transition:transform .7s}
+.sv a:hover .im img{transform:scale(1.03)}
+.sv .bd{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:16px 2px 0}
+.sv h3{font-size:18px;font-weight:700;letter-spacing:-.4px}
+.sv .d{font-size:13.5px;color:var(--mute);margin-top:2px}
+.sv .p{font-size:14px;font-weight:700;white-space:nowrap}
+.sv .new{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:1.5px;color:var(--accent);margin-bottom:4px}
+@media(max-width:960px){.sv{grid-template-columns:1fr 1fr}}@media(max-width:600px){.sv{grid-template-columns:1fr}}
 
-/* design showcase */
-.design{background:var(--paper)}
-.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
-.tabs button{font:inherit;font-size:14px;font-weight:700;padding:10px 18px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
-.tabs button.on{background:var(--cocoa);color:var(--ivory);border-color:var(--cocoa)}
-.pane{display:none}.pane.on{display:block}
-.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.g3 figure{background:#fff;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
-.g3 img{width:100%;aspect-ratio:4/5;object-fit:cover;cursor:zoom-in}
-.g3 figcaption{padding:12px 16px;font-size:13.5px;display:flex;justify-content:space-between}
-.g3 figcaption span{color:var(--mute)}
-@media(max-width:800px){.g3{grid-template-columns:1fr 1fr}}
+/* feature rows */
+.feat{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center;margin-bottom:120px}
+.feat.r{grid-template-columns:.9fr 1.1fr}.feat.r .ph{order:2}
+.feat .ph{border-radius:22px;overflow:hidden;aspect-ratio:4/3;cursor:zoom-in}
+.feat .ph img{height:100%;object-fit:cover}
+.feat h3{font-size:clamp(28px,3.2vw,44px);line-height:1.16;font-weight:800;letter-spacing:-1.8px;margin:14px 0 18px}
+.feat h3 span{font-weight:200}
+.feat p{color:var(--mute);font-size:16px;max-width:460px}
+.feat ul{list-style:none;margin:26px 0 30px;border-top:1px solid var(--line)}
+.feat li{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.feat li b{font-weight:700}
+.feat li span{color:var(--mute)}
+@media(max-width:900px){.feat,.feat.r{grid-template-columns:1fr;gap:30px}.feat.r .ph{order:0}}
 
-/* detail page mock */
-.dp-wrap{display:grid;grid-template-columns:420px 1fr;gap:50px;align-items:start}
-.dp-frame{height:760px;overflow-y:auto;border-radius:26px;border:10px solid #1d1916;background:#fff;box-shadow:0 40px 80px rgba(40,30,20,.25)}
-.dp-frame::-webkit-scrollbar{width:0}
-.dp{width:100%;font-family:"Pretendard Variable",sans-serif;color:#2b2420}
-.dp .s{padding:46px 28px;text-align:center}
-.dp .hd{background:linear-gradient(#f6e6e0,#fbf3ef);padding-top:52px}
-.dp .ey{font-size:11px;letter-spacing:3px;color:#c98f82;font-weight:700}
-.dp h4{font-family:"Noto Serif KR",serif;font-size:27px;line-height:1.35;margin:12px 0 10px;font-weight:700}
-.dp p{font-size:13.5px;color:#6f625a}
-.dp .hd img{margin:24px auto 0;border-radius:14px}
-.dp .pain{background:#2b2420;color:#f6eee8}
-.dp .pain h4{color:#fff}
-.dp .pain ul{list-style:none;margin-top:18px;text-align:left;display:grid;gap:10px}
-.dp .pain li{background:rgba(255,255,255,.07);border-radius:10px;padding:12px 14px;font-size:13.5px}
-.dp .pt{display:grid;gap:14px;margin-top:20px;text-align:left}
-.dp .pt div{display:flex;gap:14px;align-items:center;background:#faf4f0;border-radius:14px;padding:14px}
-.dp .pt b{font-family:"Cormorant Garamond",serif;font-size:30px;color:#c98f82;line-height:1;min-width:34px}
-.dp .pt span{font-size:13.5px}
-.dp .ing img,.dp .tex img{border-radius:14px;margin-top:20px}
-.dp .tex{background:#f3ece4}
-.dp .how{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}
-.dp .how div{background:#faf4f0;border-radius:12px;padding:14px 8px;font-size:12px}
-.dp .how b{display:block;font-size:20px;color:#c98f82;font-family:"Cormorant Garamond",serif}
-.dp .info{background:#f7f3ef;text-align:left;font-size:12px;color:#7a6d65}
-.dp .info table{width:100%;border-collapse:collapse;margin-top:12px}
-.dp .info td{border-top:1px solid #e5dcd2;padding:8px 4px;vertical-align:top}
-.dp .info td:first-child{width:34%;font-weight:700;color:#4a3f38}
-.dp-note h3{font-family:"Noto Serif KR",serif;font-size:26px;margin-bottom:12px}
-.dp-note ol{padding-left:20px;color:var(--ink);font-size:15px;display:grid;gap:6px;margin:18px 0 26px}
-@media(max-width:900px){.dp-wrap{grid-template-columns:1fr}.dp-frame{max-width:420px;margin:0 auto}}
+/* scroll detail */
+.dpwrap{display:grid;grid-template-columns:380px 1fr;gap:70px;align-items:center}
+.dpf{height:720px;overflow-y:auto;border-radius:44px;border:12px solid #141110;background:#fff;box-shadow:0 50px 100px rgba(20,17,16,.25)}
+.dpf::-webkit-scrollbar{width:0}
+@media(max-width:900px){.dpwrap{grid-template-columns:1fr}.dpf{max-width:380px;margin:0 auto}}
 
-/* ad set */
-.ads{display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:18px;align-items:start}
-.ad{border-radius:16px;overflow:hidden;position:relative;box-shadow:0 20px 50px rgba(40,30,20,.16)}
-.ad img{width:100%;height:100%;object-fit:cover}
-.ad .ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;background:linear-gradient(transparent 40%,rgba(30,22,18,.72))}
-.ad .ov .k{font-size:11px;letter-spacing:2px;font-weight:800;color:#f2d3c9}
-.ad .ov h5{font-family:"Noto Serif KR",serif;color:#fff;font-size:22px;line-height:1.3;margin:6px 0 10px}
-.ad .ov .b{align-self:flex-start;background:#fff;color:#2b2420;font-weight:800;font-size:12px;padding:7px 14px;border-radius:99px}
-.ad.sq{aspect-ratio:1/1}.ad.p45{aspect-ratio:4/5}.ad.ls{aspect-ratio:1200/628}.ad.ls img{object-position:70% 40%}
-.ad.ls .ov{background:linear-gradient(90deg,rgba(250,240,235,.96) 0 46%,transparent 70%);justify-content:center;padding-left:28px}
-.ad.ls .ov .k{color:#c98f82}.ad.ls .ov h5{color:#2b2420}
-.ad.ls .ov .b{background:#2b2420;color:#fff}
-.adlbl{font-size:12px;color:var(--mute);margin-top:8px;font-weight:600}
-@media(max-width:900px){.ads{grid-template-columns:1fr 1fr}}
+/* video */
+.dark{background:#0f0d0c;color:#f2ece6}
+.dark .sh p{color:#9d928a}
+.dark .k{color:#d1ad9f}
+.vids{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.vids figure{border-radius:18px;overflow:hidden;aspect-ratio:9/16;background:#1c1816;position:relative}
+.vids video{height:100%;object-fit:cover}
+.vids figcaption{position:absolute;left:16px;bottom:14px;font-size:13px;font-weight:600;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+.bts{margin-top:18px;border-radius:18px;overflow:hidden;aspect-ratio:21/9}
+.bts img{height:100%;object-fit:cover;object-position:center 40%}
+.dark .pr{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.dark .pr div{border:1px solid #2a2522;border-radius:16px;padding:22px}
+.dark .pr h4{font-size:13px;color:#9d928a;font-weight:600}.dark .pr .n{font-size:26px;font-weight:800;margin:4px 0 6px}.dark .pr p{font-size:13.5px;color:#c7bdb5}
+@media(max-width:860px){.vids,.dark .pr{grid-template-columns:1fr}}
 
-/* packages */
-.pk{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
-.pk>div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
-.pk>div.hl{border-color:var(--rose);box-shadow:0 0 0 1px var(--rose) inset}
-.pk h4{font-size:14px;color:var(--mute);font-weight:600}
-.pk .pr{font-size:28px;font-weight:800;margin:4px 0 10px}
-.pk ul{list-style:none;font-size:14px;color:var(--ink)}
-.pk li{padding:6px 0;border-top:1px dashed var(--line)}
-.pk li:first-child{border-top:0}
-.pkt{font-family:"Noto Serif KR",serif;font-size:22px;margin-top:56px}
-@media(max-width:800px){.pk{grid-template-columns:1fr}}
+/* small gallery */
+.duo{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.duo img{border-radius:14px;aspect-ratio:4/3;object-fit:cover;cursor:zoom-in}
+.pages{display:flex;gap:14px;margin-top:28px}
+.pages img{width:auto;height:340px;border-radius:6px;box-shadow:0 20px 40px rgba(40,30,20,.15);cursor:zoom-in}
+@media(max-width:860px){.duo{grid-template-columns:1fr}.pages{overflow-x:auto}}
 
-/* video (dark) */
-.dark{background:var(--night);color:#efe8e2}
-.dark .sh p{color:#a99d94}
-.dark .sh h2 em{color:var(--blush)}
-.vw{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.pair{background:var(--night2);border:1px solid #2c2622;border-radius:var(--r);padding:14px}
-.pair .row{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:relative}
-.pair .row:after{content:"→";position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);width:34px;height:34px;border-radius:50%;background:var(--blush);color:var(--cocoa);font-weight:900;display:grid;place-items:center}
-.pair img,.pair video{aspect-ratio:9/16;object-fit:cover;border-radius:12px;width:100%}
-.pair .cap{display:flex;justify-content:space-between;margin-top:12px;font-size:13.5px}
-.pair .cap span{color:#a99d94}
-.lbl{font-size:10.5px;font-weight:800;letter-spacing:1.5px;color:#a99d94;margin-bottom:6px}
-.dark .pk>div{background:var(--night2);border-color:#2c2622}
-.dark .pk>div.hl{border-color:var(--blush);box-shadow:0 0 0 1px var(--blush) inset}
-.dark .pk ul{color:#d8cfc8}.dark .pk li{border-color:#2c2622}
-@media(max-width:900px){.vw{grid-template-columns:1fr}}
+/* about */
+.ab{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.ab .big{font-size:clamp(24px,2.4vw,32px);line-height:1.5;font-weight:300;letter-spacing:-1px}
+.ab .big b{font-weight:800}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:44px;border-top:1px solid var(--line)}
+.stats div{padding:22px 0}.stats .n{font-size:44px;font-weight:200;letter-spacing:-2px}.stats .t{font-size:13px;color:var(--mute)}
+.tl{list-style:none}
+.tl li{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--line)}
+.tl .y{font-size:13px;color:var(--mute);padding-top:2px}.tl .r{font-weight:700;font-size:16px}.tl .x{font-size:14px;color:var(--mute)}
+@media(max-width:900px){.ab{grid-template-columns:1fr;gap:40px}}
 
-/* nukki / saju / ebook */
-.ng{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.ng img{border-radius:14px;border:1px solid var(--line);cursor:zoom-in;aspect-ratio:4/3;object-fit:cover;width:100%}
-@media(max-width:800px){.ng{grid-template-columns:1fr 1fr}}
-.saju{background:#F5F0E6}
-.saju .sh h2 em{color:#3E8C86}.saju .sh .no{color:#3E8C86}
-.pages{display:flex;gap:16px;overflow-x:auto;padding:6px 4px 24px;scroll-snap-type:x mandatory}
-.pages img{height:430px;width:auto;border-radius:6px;box-shadow:0 18px 40px rgba(60,50,30,.16);scroll-snap-align:start;cursor:zoom-in;flex:none}
-.saju .pk>div.hl{border-color:#3E8C86;box-shadow:0 0 0 1px #3E8C86 inset}
-.eb{display:grid;grid-template-columns:.75fr 1.25fr;gap:50px;align-items:start}
-.eb .cover{border-radius:10px;box-shadow:0 40px 80px rgba(40,30,20,.3)}
-.toc{columns:2;gap:30px;font-size:15px;margin-top:4px}
-.toc li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);break-inside:avoid}
-.toc li span{color:var(--rose);font-weight:700;margin-right:8px}
-.eb .pv{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
-.eb .pv img{border-radius:8px;border:1px solid var(--line);cursor:zoom-in}
-@media(max-width:900px){.eb{grid-template-columns:1fr}.toc{columns:1}}
+/* contact */
+.cta-s{position:relative;overflow:hidden;color:#fff;text-align:center;padding:170px 0;background:#141110}
+.cta-s .bg{position:absolute;inset:0;background:url(assets/img/saju.jpg) center/cover;opacity:.35}
+.cta-s .w{position:relative}
+.cta-s h2{font-size:clamp(38px,5.6vw,80px);line-height:1.06;font-weight:800;letter-spacing:-3px}
+.cta-s h2 span{font-weight:200}
+.cta-s p{color:rgba(255,255,255,.75);margin:22px 0 38px;font-size:17px}
+.cta-s .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cta-s .btn.solid{background:#fff;color:var(--ink)}
+footer{background:#141110;color:#7d736c;font-size:12.5px;padding:26px 0;border-top:1px solid #2a2522}
+footer .w{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
-/* process / about */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:s}
-.steps>div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 20px}
-.steps>div:before{counter-increment:s;content:"0" counter(s);font-family:"Cormorant Garamond",serif;font-style:italic;font-size:40px;color:var(--rose);line-height:1;display:block;margin-bottom:10px}
-.steps b{display:block;font-size:17px;margin-bottom:4px}
-.steps p{font-size:13.5px;color:var(--mute)}
-.tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
-.tools span{padding:9px 16px;border-radius:12px;background:#fff;border:1px solid var(--line);font-weight:600;font-size:13.5px}
-.tools span i{font-style:normal;color:var(--mute);font-weight:500;margin-left:6px}
-@media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:60px}
-.about .big{font-family:"Noto Serif KR",serif;font-size:24px;line-height:1.65}
-.about .big em{font-style:normal;color:var(--rose);font-weight:700}
-.hl3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
-.hl3>div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
-.hl3 .n{font-family:"Cormorant Garamond",serif;font-size:40px;color:var(--rose);line-height:1}
-.hl3 .t{font-size:13px;color:var(--mute);margin-top:6px}
-.tl{list-style:none;border-left:1px solid var(--rose);padding-left:26px}
-.tl li{position:relative;padding:0 0 24px}
-.tl li:before{content:"";position:absolute;left:-32px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--ivory);border:2px solid var(--rose)}
-.tl .y{font-size:12.5px;color:var(--rose);font-weight:700}
-.tl .r{font-size:16.5px;font-weight:700;margin:2px 0}
-.tl .x{font-size:13.5px;color:var(--mute)}
-@media(max-width:900px){.about{grid-template-columns:1fr}}
-.contact{text-align:center;padding:120px 0;background:linear-gradient(180deg,var(--ivory),var(--blush))}
-.contact h2{font-family:"Noto Serif KR",serif;font-size:clamp(36px,5vw,62px);line-height:1.2;letter-spacing:-1.2px;margin-bottom:16px}
-.contact h2 .ko{color:var(--rose)}
-.contact p{color:var(--ink);margin-bottom:32px}
-.contact .cta{justify-content:center}
-footer{padding:28px 0;color:var(--mute);font-size:12.5px;border-top:1px solid var(--line);background:var(--ivory)}
-footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-#lb{position:fixed;inset:0;background:rgba(20,15,12,.9);display:none;align-items:center;justify-content:center;z-index:100;padding:30px;cursor:zoom-out}
-#lb.on{display:flex}
-#lb img{max-height:92vh;max-width:92vw;border-radius:10px}
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
-.reveal.in{opacity:1;transform:none}
+#lb{position:fixed;inset:0;background:rgba(10,8,7,.94);display:none;align-items:center;justify-content:center;z-index:100;cursor:zoom-out;padding:30px}
+#lb.on{display:flex}#lb img{max-width:94vw;max-height:92vh;width:auto;border-radius:8px}
+.rv{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none}
 </style>
 </head>
 <body>
 
-<nav><div class="wrap">
-  <a class="logo" href="/" title="HKx AI Solutions 홈">HKx<span>AI Studio</span></a>
-  <div class="menu"><a class="back" href="/">← HKx Consulting</a><a href="#design">AI 디자인</a><a href="#video">AI 숏폼</a><a href="#nukki">누끼</a><a href="#saju">사주 리포트</a><a href="#ebook">전자책</a><a href="#about">About</a></div>
-  <a class="btn dark" href="#contact">작업 문의</a>
+<nav id="nav"><div class="w">
+  <a class="logo" href="/">HKx <b>AI Studio</b></a>
+  <div class="m"><a href="/">HKx Consulting</a><a href="#work">Work</a><a href="#campaigns">Campaigns</a><a href="#beyond">Beyond Beauty</a><a href="#services">Services</a><a href="#beauty">K-Beauty</a><a href="#video">AI Video</a><a href="#about">About</a></div>
+  <a class="btn" href="#contact">작업 문의</a>
 </div></nav>
 
-<header class="hero" id="top"><div class="wrap">
-  <div>
-    <span class="kicker">K-Beauty AI Creative Studio</span>
-    <h1>촬영 없이,<br><span class="ko">팔리는</span> 비주얼.</h1>
-    <p class="lead">화장품 연출컷 · 모델컷 · 상세페이지 · 광고소재 · 숏폼까지. NYU에서 AI를 공부하고 CES에서 세 번 수상한 경험으로, 스튜디오 촬영 대신 AI 파이프라인으로 브랜드 비주얼을 만듭니다.</p>
-    <div class="chips">
-      <span class="chip">🎓 <b>NYU</b> Computer Science · AI</span>
-      <span class="chip">🏆 <b>CES</b> 수상 ×3</span>
-      <span class="chip">⚙️ <b>Scale.AI</b> Alumni</span>
-      <span class="chip">💄 K-뷰티 커머스 실무</span>
-    </div>
-    <div class="cta"><a class="btn dark" href="#design">디자인 샘플 보기 →</a><a class="btn line" href="#services">전체 서비스</a></div>
+<header class="hero">
+  <div class="bg"></div><div class="ov"></div>
+  <div class="w">
+    <span class="k">HKx AI Studio · Seoul</span>
+    <h1><span>촬영 없이 만드는</span><br>진짜 같은 비주얼.</h1>
+    <p>화장품 · 식음료 · 패션 · 가구 · 전자기기까지, 연출컷부터 상세페이지 · 광고소재 · 숏폼. 이 페이지의 모든 사진은 실제 촬영 없이 AI로 만들었습니다.</p>
+    <div class="cta"><a class="btn solid" style="background:#fff;color:#141110" href="#work">작업물 보기</a><a class="btn ghost" href="#services">서비스 · 가격</a></div>
   </div>
-  <div class="collage">
-    <div class="c c1"><img src="assets/img/kb_hero_lineup.png" alt="AI 화장품 연출컷"></div>
-    <div class="c c2"><img src="assets/img/kb_model.png" alt="AI 모델컷"></div>
-    <div class="c c3"><video src="assets/video/serum.mp4" autoplay muted loop playsinline poster="assets/img/in_serum.png"></video></div>
-    <div class="tag"><b>모두 AI로 제작</b>촬영 · 스튜디오 · 모델 섭외 없이</div>
-  </div>
-</div></header>
+  <div class="cred"><span><b>NYU</b>Computer Science · AI</span><span><b>CES</b>수상 ×3</span><span><b>Scale.AI</b>Alumni</span><span><b>K-Beauty</b>커머스 실무</span></div>
+</header>
 
-<div class="trend"><div class="wrap">
-  <h2>지금 크몽에서 많이 찾는 뷰티 디자인</h2>
-  <p class="sub">크몽 디자인 · 사진 카테고리 랭킹 상위 서비스를 분석해, 수요는 크고 AI로 더 빠르게 만들 수 있는 영역에 집중했습니다.</p>
-  <div class="tg">
-    <div><div class="n">1,417</div><div class="t">화장품 연출 촬영</div><div class="d">제품 사진 카테고리 상위 서비스 리뷰 수. 실촬영 수요를 AI 연출컷으로 대체합니다.</div></div>
-    <div><div class="n">132만</div><div class="t">화장품 상세페이지</div><div class="d">뷰티 상세페이지 상위 서비스 단가(원). AI 모델컷 포함 상세는 아직 경쟁이 적습니다.</div></div>
-    <div><div class="n">20</div><div class="t">뷰티 전문 광고소재</div><div class="d">SNS 광고소재 카테고리에서 뷰티 전문 서비스의 리뷰 수. 수요 대비 공급이 비어 있습니다.</div></div>
-    <div><div class="n">343</div><div class="t">화장품 패키지</div><div class="d">화장품 패키지 상위 서비스 리뷰 수. 컨셉 시안 · 목업을 AI로 먼저 보여드립니다.</div></div>
-  </div>
-  <p class="src">기준: 2026년 10월 크몽 공개 서비스 목록 (카테고리 랭킹 상위 144개)</p>
-</div></div>
-
-<section id="services"><div class="wrap">
-  <div class="sh reveal"><div><span class="no">Services</span><h2>AI로 만드는<br><em>일곱 가지</em> 결과물</h2></div><p>정해진 주문서로 받아 AI 파이프라인으로 제작하고, 사람이 직접 검수해 파일로 납품합니다.</p></div>
-  <div class="svc reveal">
-    <a class="wide" href="#design"><div class="th"><img src="assets/img/kb_hero_lineup.png" alt="" style="object-position:center 60%"></div><div class="bd"><span class="new">NEW · K-BEAUTY</span><h3>화장품 AI 연출컷 · 모델컷 · 제형컷</h3><p class="d">누끼컷 한 장으로 상세페이지 · 스토어 · SNS용 연출컷</p><p class="p">29,000원부터</p></div></a>
-    <a href="#design" data-tab="detail"><div class="th"><img src="assets/img/kb_texture_cream.png" alt=""></div><div class="bd"><span class="new">NEW</span><h3>화장품 상세페이지</h3><p class="d">기획 · 디자인 · AI 연출컷 올인원</p><p class="p">99,000원부터</p></div></a>
-    <a href="#design" data-tab="ads"><div class="th"><img src="assets/img/kb_cica.png" alt="" style="object-position:center 40%"></div><div class="bd"><span class="new">NEW</span><h3>뷰티 광고소재 세트</h3><p class="d">메타 · 네이버 GFA · 카카오 규격, A/B 시안</p><p class="p">19,000원부터</p></div></a>
-    <a href="#video"><div class="th"><img src="assets/img/main_aivideo.png" alt=""></div><div class="bd"><h3>AI 광고 숏폼</h3><p class="d">상품 사진 1장으로 릴스 · 쇼츠 광고 영상</p><p class="p">39,000원부터</p></div></a>
-    <a href="#nukki"><div class="th"><img src="assets/img/main_nukki.png" alt=""></div><div class="bd"><h3>AI 누끼 · 상품컷 정리</h3><p class="d">배경 제거 · 흰 배경 · 그림자 일괄</p><p class="p">5,000원부터</p></div></a>
-    <a href="#saju"><div class="th"><img src="assets/img/main_saju.png" alt=""></div><div class="bd"><h3>사주 감정서 PDF</h3><p class="d">명리 엔진 + AI 해석 문서형 리포트</p><p class="p">19,000원부터</p></div></a>
-    <a href="#ebook"><div class="th"><img src="assets/img/ebook_cover.png" alt="" style="object-position:center 18%"></div><div class="bd"><h3>AI 숏폼 제작 전자책</h3><p class="d">Higgsfield + Claude 실전 워크플로</p><p class="p">24,000원</p></div></a>
+<section id="work"><div class="w">
+  <div class="sh rv"><div><span class="k">Selected Work</span><h2><span>스튜디오도, 모델도</span><br>없었습니다.</h2></div><p>가상의 스킨케어 브랜드 'LUMEA'로 만든 샘플입니다. 실제 주문에서는 보내주신 제품의 형태와 라벨을 그대로 유지합니다.</p></div>
+  <div class="work rv">
+    <figure class="c7"><img src="assets/img/hero.jpg" alt="AI 화장품 연출컷"><figcaption>제품 연출컷<span>K-Beauty</span></figcaption></figure>
+    <figure class="c5"><img src="assets/img/model.jpg" alt="AI 모델컷" style="object-position:62% center"><figcaption>AI 모델컷<span>가상 인물</span></figcaption></figure>
+    <figure class="c4"><img src="assets/img/flatlay.jpg" alt="플랫레이 제형컷"><figcaption>제형 · 플랫레이<span>상세페이지용</span></figcaption></figure>
+    <figure class="c4"><img src="assets/img/phone_detail.jpg" alt="상세페이지 목업" style="object-position:70% center"><figcaption>상세페이지<span>모바일</span></figcaption></figure>
+    <figure class="c4"><img src="assets/img/phone_ad.jpg" alt="인스타그램 광고소재" style="object-position:75% center"><figcaption>광고소재<span>Meta 4:5</span></figcaption></figure>
+    <figure class="c8"><img src="assets/img/video_bts.jpg" alt="AI 광고 영상"><figcaption>AI 광고 숏폼<span>Kling · Higgsfield</span></figcaption></figure>
+    <figure class="c4"><img src="assets/img/nukki_split.jpg" alt="누끼"><figcaption>누끼 · 상품컷<span>Before / After</span></figcaption></figure>
+    <figure class="c6"><img src="assets/img/saju.jpg" alt="사주 감정서"><figcaption>사주 감정서 PDF<span>브랜드 비주얼</span></figcaption></figure>
+    <figure class="c6"><img src="assets/img/ebook_mock.jpg" alt="전자책"><figcaption>AI 숏폼 전자책<span>42쪽</span></figcaption></figure>
   </div>
 </div></section>
 
-<section id="design" class="design"><div class="wrap">
-  <div class="sh reveal"><div><span class="no">01 — AI Design for K-Beauty</span><h2>스튜디오 없이 만드는<br><em>화장품 비주얼</em></h2></div><p>아래 이미지는 모두 가상의 브랜드로 AI가 만든 샘플입니다. 실제 주문에서는 보내주신 제품 사진의 형태와 라벨을 유지하고, 작은 글자는 편집 단계에서 원본으로 얹습니다.</p></div>
-  <div class="tabs">
-    <button class="on" data-p="cuts">연출컷</button><button data-p="tex">제형 · 모델컷</button><button data-p="detail">상세페이지</button><button data-p="ads">광고소재</button><button data-p="pkg">패키지 목업</button>
-  </div>
-
-  <div class="pane on" id="p-cuts"><div class="g3">
-    <figure><img src="assets/img/kb_hero_lineup.png" alt=""><figcaption><b>라인업 세트컷</b><span>물결 · 블러시</span></figcaption></figure>
-    <figure><img src="assets/img/kb_cica.png" alt=""><figcaption><b>원료 연출컷</b><span>병풀 · 물방울</span></figcaption></figure>
-    <figure><img src="assets/img/kb_sun.png" alt=""><figcaption><b>시즌 무드컷</b><span>햇살 · 그림자</span></figcaption></figure>
-  </div></div>
-
-  <div class="pane" id="p-tex"><div class="g3">
-    <figure><img src="assets/img/kb_texture_cream.png" alt=""><figcaption><b>크림 제형컷</b><span>스와치 매크로</span></figcaption></figure>
-    <figure><img src="assets/img/kb_texture_serum.png" alt=""><figcaption><b>세럼 드롭컷</b><span>앰플 텍스처</span></figcaption></figure>
-    <figure><img src="assets/img/kb_model.png" alt=""><figcaption><b>AI 모델컷</b><span>가상 인물</span></figcaption></figure>
-  </div></div>
-
-  <div class="pane" id="p-detail"><div class="dp-wrap">
-    <div class="dp-frame"><div class="dp">
-      <div class="s hd"><div class="ey">DAILY BARRIER CREAM</div><h4>건조한 계절에도<br>하루 종일 편안하게</h4><p>속건조까지 채우는 데일리 장벽 크림</p><img src="assets/img/kb_hero_lineup.png" alt=""></div>
-      <div class="s pain"><div class="ey">혹시 이런 고민 있으세요?</div><h4>세안 후 5분이면<br>당기는 피부</h4><ul><li>오후만 되면 각질이 일어나요</li><li>무거운 크림은 답답하고 트러블이 걱정돼요</li><li>계절이 바뀔 때마다 피부가 예민해져요</li></ul></div>
-      <div class="s"><div class="ey">POINT</div><h4>가볍게 스며들고<br>촉촉함은 오래</h4><div class="pt"><div><b>01</b><span>세라마이드 · 병풀 추출물로 피부 장벽 케어</span></div><div><b>02</b><span>끈적임 없이 흡수되는 수분 크림 제형</span></div><div><b>03</b><span>민감 피부도 데일리로 쓰기 좋은 저자극 설계</span></div></div></div>
-      <div class="s ing"><div class="ey">INGREDIENT</div><h4>원료에서 시작한<br>순한 보습</h4><p>병풀 · 판테놀 · 세라마이드 3중 보습 포뮬러</p><img src="assets/img/kb_cica.png" alt=""></div>
-      <div class="s tex"><div class="ey">TEXTURE</div><h4>바르는 순간<br>사르르 녹는 제형</h4><img src="assets/img/kb_texture_cream.png" alt=""></div>
-      <div class="s"><div class="ey">HOW TO USE</div><h4>아침 저녁<br>마지막 단계에</h4><div class="how"><div><b>1</b>스킨케어 마지막 단계</div><div><b>2</b>적당량을 덜어</div><div><b>3</b>결 따라 부드럽게</div></div></div>
-      <div class="s info"><div class="ey" style="text-align:center">PRODUCT INFO</div><table><tr><td>제품명</td><td>데일리 배리어 크림 (샘플)</td></tr><tr><td>용량</td><td>50ml</td></tr><tr><td>사용기한</td><td>제조일로부터 30개월</td></tr><tr><td>주의사항</td><td>이상이 있는 경우 사용을 중지하고 전문의와 상담하세요.</td></tr></table></div>
-    </div></div>
-    <div class="dp-note">
-      <h3>상세페이지 구성 예시</h3>
-      <p style="color:var(--mute)">왼쪽 화면을 스크롤해 보세요. 가상 제품 기준 샘플이며, 연출컷 · 제형컷은 모두 AI로 만들었습니다.</p>
-      <ol><li>후킹 헤드: 핵심 고민 + 대표 컷</li><li>고민 공감</li><li>해결 포인트 3가지</li><li>원료 스토리</li><li>제형 · 텍스처</li><li>사용법</li><li>제품 정보 · 주의사항</li></ol>
-      <p style="font-size:13px;color:var(--mute)">화장품 표시 · 광고 기준에 맞지 않는 효능 표현(치료, 재생 등)은 순화해 제안합니다.</p>
-    </div>
-  </div></div>
-
-  <div class="pane" id="p-ads"><div class="ads">
-    <div><div class="ad sq"><img src="assets/img/kb_cica.png" alt=""><div class="ov"><span class="k">META · 1080x1080</span><h5>예민한 날에도<br>순하게, 병풀 토너</h5><span class="b">자세히 보기</span></div></div><div class="adlbl">인스타그램 피드 · 정사각</div></div>
-    <div><div class="ad p45"><img src="assets/img/kb_model.png" alt=""><div class="ov"><span class="k">META · 1080x1350</span><h5>속건조까지 채우는<br>데일리 장벽 크림</h5><span class="b">지금 만나보기</span></div></div><div class="adlbl">인스타그램 피드 · 4:5</div></div>
-    <div><div class="ad ls"><img src="assets/img/kb_sun.png" alt=""><div class="ov"><span class="k">NAVER GFA · 1200x628</span><h5>가볍게 바르는<br>데일리 선크림</h5><span class="b">구매하러 가기</span></div></div><div class="adlbl">네이버 GFA · 카카오 가로형</div></div>
-  </div></div>
-
-  <div class="pane" id="p-pkg"><div class="g3" style="grid-template-columns:1.2fr .8fr">
-    <figure><img src="assets/img/kb_package.png" alt="" style="aspect-ratio:4/5"><figcaption><b>패키지 컨셉 목업</b><span>박스 · 튜브 · 용기</span></figcaption></figure>
-    <div style="background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px">
-      <h3 class="serif" style="font-size:22px;margin-bottom:10px">패키지 시안을 먼저 눈으로</h3>
-      <p style="color:var(--mute);font-size:14.5px">인쇄 도면 작업 전에, 컬러 · 무드 · 용기 조합을 AI 목업으로 빠르게 비교합니다. 확정된 시안은 상세페이지 · 광고소재에 그대로 이어집니다.</p>
-      <ul style="margin-top:16px;padding-left:18px;font-size:14px;display:grid;gap:6px"><li>컬러 · 무드 시안 3종</li><li>박스 · 튜브 · 용기 조합 목업</li><li>상세 · 광고용 연출컷 연계</li></ul>
-    </div>
-  </div></div>
-
-  <div class="pkt">화장품 AI 연출컷 · 모델컷 · 제형컷</div>
-  <div class="pk" style="margin-top:16px">
-    <div><h4>STANDARD</h4><div class="pr">29,000원</div><ul><li>연출컷 3장 · 2048px</li><li>2일 · 수정 1회</li></ul></div>
-    <div class="hl"><h4>DELUXE</h4><div class="pr">59,000원</div><ul><li>연출컷 6장 + 제형컷 2장</li><li>3일 · 수정 2회</li></ul></div>
-    <div><h4>PREMIUM</h4><div class="pr">119,000원</div><ul><li>연출 6 + 제형 3 + AI 모델컷 3 · 4096px</li><li>4일 · 수정 3회</li></ul></div>
-  </div>
-  <div class="pkt">화장품 상세페이지</div>
-  <div class="pk" style="margin-top:16px">
-    <div><h4>STANDARD</h4><div class="pr">99,000원</div><ul><li>5섹션 + 연출컷 3장</li><li>4일 · 수정 2회</li></ul></div>
-    <div class="hl"><h4>DELUXE</h4><div class="pr">190,000원</div><ul><li>9섹션 + 연출 5 · 제형 2 · PSD</li><li>6일 · 수정 3회</li></ul></div>
-    <div><h4>PREMIUM</h4><div class="pr">390,000원</div><ul><li>13섹션 + 컷 8장 + 광고소재 3종</li><li>8일 · 수정 4회</li></ul></div>
-  </div>
-  <div class="pkt">뷰티 광고소재 세트</div>
-  <div class="pk" style="margin-top:16px">
-    <div><h4>STANDARD</h4><div class="pr">19,000원</div><ul><li>시안 1종 x 3규격</li><li>1일 · 수정 1회</li></ul></div>
-    <div class="hl"><h4>DELUXE</h4><div class="pr">49,000원</div><ul><li>시안 3종 x 3규격 (A/B 테스트)</li><li>2일 · 수정 2회</li></ul></div>
-    <div><h4>PREMIUM</h4><div class="pr">99,000원</div><ul><li>시안 6종 x 4규격 + 카드뉴스 6장</li><li>3일 · 수정 3회</li></ul></div>
-  </div>
+<section id="campaigns" style="padding-top:0"><div class="w">
+  <div class="sh rv"><div><span class="k">Brand Campaigns</span><h2><span>패키지 설계부터</span><br>캠페인 비주얼까지</h2></div><p>가상의 브랜드 세 개를 직접 기획했습니다. 제품 패키지를 먼저 설계하고, 그 이미지를 레퍼런스로 넣어 모든 장면에서 같은 제품이 나오도록 만들었습니다. (ComfyUI · Nano Banana Pro · Magnific)</p></div>
+  <div class="camp rv"><div class="big"><img src="assets/img/aurelle_keyart.jpg" alt=""><div class="t"><p>럭셔리 스킨케어 · 어둠 속 금빛 광채와 앰버 실크로 탄력을 은유</p><h3>AURELLE</h3></div></div>
+   <div class="side"><div class="info"><span class="k">Golden Peptide Ampoule</span><div class="mood">Elegant · Luminous · Sensual</div><div class="pal"><i style="background:#0E0B08"></i><i style="background:#8C5A2B"></i><i style="background:#E8B04B"></i><i style="background:#F3E2C7"></i></div></div>
+   <div class="two"><img src="assets/img/aurelle_still.jpg" alt=""><img src="assets/img/aurelle_editorial.jpg" alt=""></div>
+   <div class="one"><img src="assets/img/aurelle_texture.jpg" alt="" style="width:100%;height:100%;object-position:center 40%"></div></div></div><div class="camp rv"><div class="big"><img src="assets/img/solis_keyart.jpg" alt=""><div class="t"><p>선케어 · 제주 현무암과 파도, 한낮의 하드 섀도로 청량감</p><h3>SOLIS</h3></div></div>
+   <div class="side"><div class="info"><span class="k">Jeju Summer Sun Care</span><div class="mood">Fresh · Sunlit · Playful</div><div class="pal"><i style="background:#1E6FD9"></i><i style="background:#8FD3F4"></i><i style="background:#F2DCB3"></i><i style="background:#FFFFFF"></i></div></div>
+   <div class="two"><img src="assets/img/solis_still.jpg" alt=""><img src="assets/img/solis_editorial.jpg" alt=""></div>
+   <div class="one"><img src="assets/img/solis_flatlay.jpg" alt="" style="width:100%;height:260px;object-position:center 40%"></div></div></div><div class="camp rv"><div class="big"><img src="assets/img/mirae_keyart.jpg" alt=""><div class="t"><p>전통주 · 코발트 블루와 우윳빛 스플래시, 을지로의 밤</p><h3>MIRAE 미래</h3></div></div>
+   <div class="side"><div class="info"><span class="k">Sparkling Makgeolli</span><div class="mood">Bold · Fresh · Modern-Trad</div><div class="pal"><i style="background:#071230"></i><i style="background:#2F4FBF"></i><i style="background:#F4F1EA"></i><i style="background:#C9B79C"></i></div></div>
+   <div class="two"><img src="assets/img/mirae_still.jpg" alt=""><img src="assets/img/mirae_editorial.jpg" alt=""></div>
+   <div class="one"><img src="assets/img/mirae_pack.jpg" alt="" style="width:100%;height:260px;object-position:center 40%"></div></div></div>
 </div></section>
-
-<section id="video" class="dark"><div class="wrap">
-  <div class="sh reveal"><div><span class="no">02 — AI Video Ads</span><h2>사진 한 장이<br><em>광고 영상</em>으로</h2></div><p>왼쪽은 입력한 상품 사진, 오른쪽은 AI로 만든 5초 1080p 영상입니다. 한글 문구 · 로고는 편집 단계에서 얹습니다.</p></div>
-  <div class="vw reveal">
-    <div class="pair"><div class="row"><div><div class="lbl">INPUT</div><img src="assets/img/in_serum.png" alt=""></div><div><div class="lbl">OUTPUT</div><video src="assets/video/serum.mp4" autoplay muted loop playsinline></video></div></div><div class="cap"><b>뷰티 · 세럼</b><span>물방울 · 푸시인</span></div></div>
-    <div class="pair"><div class="row"><div><div class="lbl">INPUT</div><img src="assets/img/in_coldbrew.png" alt=""></div><div><div class="lbl">OUTPUT</div><video src="assets/video/coldbrew.mp4" autoplay muted loop playsinline></video></div></div><div class="cap"><b>푸드 · 콜드브루</b><span>아이스 슬로모션</span></div></div>
-    <div class="pair"><div class="row"><div><div class="lbl">INPUT</div><img src="assets/img/in_sneaker.png" alt=""></div><div><div class="lbl">OUTPUT</div><video src="assets/video/sneaker.mp4" autoplay muted loop playsinline></video></div></div><div class="cap"><b>패션 · 러닝화</b><span>공중 회전 · 줌인</span></div></div>
-  </div>
-  <div class="pk reveal">
-    <div><h4>STANDARD · 숏폼 1컷</h4><div class="pr">39,000원</div><ul><li>5초 x 1 · 9:16 · 1080p</li><li>2일 · 수정 1회</li></ul></div>
-    <div class="hl"><h4>DELUXE · 2컷 + 문구</h4><div class="pr">79,000원</div><ul><li>5초 x 2 · 한글 문구 2줄</li><li>9:16 + 1:1 · 3일</li></ul></div>
-    <div><h4>PREMIUM · 3컷 + 브랜딩</h4><div class="pr">149,000원</div><ul><li>5초 x 3 + 로고 엔딩</li><li>9:16 · 1:1 · 4:5 · 4일</li></ul></div>
-  </div>
+<section id="beyond" style="padding-top:20px"><div class="w">
+  <div class="sh rv"><div><span class="k">Beyond Beauty</span><h2><span>뷰티 밖에서도</span><br>같은 퀄리티로</h2></div><p>크몽에서 수요가 많은 식음료 · 패션 · 가구/인테리어 · 전자기기 업종으로 같은 방식의 캠페인을 만들었습니다. 모든 브랜드는 직접 기획한 가상 브랜드입니다.</p></div>
+  <div class="bb rv"><div class="card"><div class="mos"><img src="assets/img/ondo_keyart.jpg" alt="ONDO keyart" loading="lazy"><img src="assets/img/ondo_hero.jpg" alt="ONDO hero" loading="lazy"><img src="assets/img/ondo_cafe.jpg" alt="ONDO cafe" loading="lazy"><img src="assets/img/ondo_flatlay.jpg" alt="ONDO flatlay" loading="lazy"></div><div class="meta"><div><span class="k">F&B · 베이커리</span><h3>ONDO</h3><p>갓 구운 온기를 메뉴판 · 배달앱 · 매장 런칭 비주얼로</p></div><div class="pal"><i style="background:#2B1D12"></i><i style="background:#C27C3E"></i><i style="background:#E8D3B0"></i><i style="background:#F3EBDD"></i></div></div></div><div class="card"><div class="mos"><img src="assets/img/nova_street.jpg" alt="NOVA street" loading="lazy"><img src="assets/img/nova_studio.jpg" alt="NOVA studio" loading="lazy"><img src="assets/img/nova_detail.jpg" alt="NOVA detail" loading="lazy"><img src="assets/img/nova_flatlay.jpg" alt="NOVA flatlay" loading="lazy"></div><div class="meta"><div><span class="k">패션 · 시즌 룩북</span><h3>NOVA</h3><p>스트리트 · 스튜디오 · 디테일 · 착장까지 촬영 없이 한 시즌</p></div><div class="pal"><i style="background:#1E1A17"></i><i style="background:#8A5A3B"></i><i style="background:#C9A27C"></i><i style="background:#ECE8E2"></i></div></div></div><div class="card"><div class="mos"><img src="assets/img/moru_living.jpg" alt="MORU living" loading="lazy"><img src="assets/img/moru_cafe.jpg" alt="MORU cafe" loading="lazy"><img src="assets/img/moru_chair.jpg" alt="MORU chair" loading="lazy"><img src="assets/img/moru_bedroom.jpg" alt="MORU bedroom" loading="lazy"></div><div class="meta"><div><span class="k">가구 · 인테리어</span><h3>MORU</h3><p>제품이 놓인 생활 장면과 매장 공간 컨셉 제안</p></div><div class="pal"><i style="background:#22201C"></i><i style="background:#6E4A2E"></i><i style="background:#C8B79A"></i><i style="background:#9AAA8A"></i></div></div></div><div class="card"><div class="mos"><img src="assets/img/aero_keyart.jpg" alt="AERO keyart" loading="lazy"><img src="assets/img/aero_hero.jpg" alt="AERO hero" loading="lazy"><img src="assets/img/aero_lifestyle.jpg" alt="AERO lifestyle" loading="lazy"><img src="assets/img/aero_detail.jpg" alt="AERO detail" loading="lazy"></div><div class="meta"><div><span class="k">테크 · 신제품 런칭</span><h3>AERO</h3><p>히어로컷 · 라이프스타일 · 키비주얼 · 디테일컷</p></div><div class="pal"><i style="background:#14171A"></i><i style="background:#7C9A7E"></i><i style="background:#D9D6CF"></i><i style="background:#F4F2EE"></i></div></div></div></div>
 </div></section>
-
-<section id="nukki"><div class="wrap">
-  <div class="sh reveal"><div><span class="no">03 — AI Cut-out</span><h2>누끼부터<br><em>상품컷 정리</em>까지</h2></div><p>배경 제거 후 마켓 규격 흰 배경 · 그림자 · 컬러 배경 버전까지 일괄 정리합니다. 머리카락 · 유리병 같은 어려운 케이스는 두 모델로 교차 검수합니다.</p></div>
-  <div class="ng reveal">
-    <img src="assets/img/nukki_01_cosmetic.jpg" alt=""><img src="assets/img/nukki_02_shoe.jpg" alt=""><img src="assets/img/nukki_03_bag.jpg" alt="">
-    <img src="assets/img/nukki_04_food.jpg" alt=""><img src="assets/img/nukki_05_hair.jpg" alt=""><img src="assets/img/nukki_06_glass.jpg" alt="">
+<section id="services" class="svcs"><div class="w">
+  <div class="sh rv"><div><span class="k">Services</span><h2><span>바로 주문할 수 있는</span><br>일곱 가지 서비스</h2></div><p>정해진 주문서로 받아 AI 파이프라인으로 제작하고, 사람이 직접 검수해 파일로 납품합니다. 주문은 크몽에서 받습니다.</p></div>
+  <div class="sv rv">
+    <a href="#beauty"><div class="im"><img src="assets/img/th_kbeauty_cut.jpg" alt=""></div><div class="bd"><div><span class="new">NEW</span><h3>화장품 AI 연출컷 · 모델컷</h3><p class="d">누끼컷 한 장으로 연출 · 제형 · 모델컷</p></div><span class="p">29,000원~</span></div></a>
+    <a href="#beauty"><div class="im"><img src="assets/img/th_kbeauty_detail.jpg" alt=""></div><div class="bd"><div><span class="new">NEW</span><h3>화장품 상세페이지</h3><p class="d">기획 · 디자인 · AI 연출컷 올인원</p></div><span class="p">99,000원~</span></div></a>
+    <a href="#beauty"><div class="im"><img src="assets/img/th_kbeauty_ads.jpg" alt=""></div><div class="bd"><div><span class="new">NEW</span><h3>뷰티 광고소재 세트</h3><p class="d">메타 · GFA · 카카오 규격 A/B 시안</p></div><span class="p">19,000원~</span></div></a>
+    <a href="#video"><div class="im"><img src="assets/img/th_ai_video.jpg" alt=""></div><div class="bd"><div><h3>AI 광고 숏폼</h3><p class="d">상품 사진 1장으로 릴스 · 쇼츠 광고</p></div><span class="p">39,000원~</span></div></a>
+    <a href="#more"><div class="im"><img src="assets/img/th_nukki.jpg" alt=""></div><div class="bd"><div><h3>AI 누끼 · 상품컷 정리</h3><p class="d">배경 제거 · 흰 배경 · 그림자 일괄</p></div><span class="p">5,000원~</span></div></a>
+    <a href="#more"><div class="im"><img src="assets/img/th_saju.jpg" alt=""></div><div class="bd"><div><h3>사주 감정서 PDF</h3><p class="d">명리 엔진 + AI 해석 문서형 리포트</p></div><span class="p">19,000원~</span></div></a>
   </div>
-  <div class="pk reveal">
-    <div><h4>STANDARD</h4><div class="pr">5,000원</div><ul><li>5장 · 투명 PNG + 흰 배경 JPG</li><li>1일 · 수정 2회</li></ul></div>
-    <div class="hl"><h4>DELUXE</h4><div class="pr">15,000원</div><ul><li>20장 + 그림자 버전</li><li>1일 · 수정 3회</li></ul></div>
-    <div><h4>PREMIUM</h4><div class="pr">30,000원</div><ul><li>50장 · 2사이즈 · 그림자 · 컬러 1종</li><li>1일 · 수정 5회</li></ul></div>
-  </div>
-</div></section>
-
-<section id="saju" class="saju"><div class="wrap">
-  <div class="sh reveal"><div><span class="no">04 — Saju Report</span><h2>질문에 <em>시기</em>까지<br>답하는 사주 감정서</h2></div><p>직접 만든 명리 계산 엔진으로 원국 · 오행 · 대운 · 세운을 계산하고, AI가 질문별 시기를 정리해 PDF로 드립니다.</p></div>
-  <div class="pages reveal">
-    <img src="assets/img/saju_p01.png" alt=""><img src="assets/img/saju_p02.png" alt=""><img src="assets/img/saju_p03.png" alt=""><img src="assets/img/saju_p04.png" alt=""><img src="assets/img/saju_p05.png" alt=""><img src="assets/img/saju_p06.png" alt=""><img src="assets/img/saju_p07.png" alt=""><img src="assets/img/saju_p08.png" alt=""><img src="assets/img/saju_p09.png" alt=""><img src="assets/img/saju_p10.png" alt="">
-  </div>
-  <div class="pk reveal">
-    <div><h4>STANDARD · 질문 1개</h4><div class="pr">19,000원</div><ul><li>약 6쪽 PDF · 3일</li></ul></div>
-    <div class="hl"><h4>DELUXE · 질문 2개</h4><div class="pr">39,000원</div><ul><li>약 10쪽 PDF · 5일</li></ul></div>
-    <div><h4>PREMIUM · 인생 흐름 + 질문 2개</h4><div class="pr">89,000원</div><ul><li>약 17쪽 PDF · 7일</li></ul></div>
-  </div>
-</div></section>
-
-<section id="ebook"><div class="wrap">
-  <div class="sh reveal"><div><span class="no">05 — E-book</span><h2>이 페이지를 만든 방법을<br><em>그대로</em> 담았습니다</h2></div><p>Higgsfield와 Claude로 AI 상품 이미지와 광고 숏폼을 만드는 실전 워크플로. A4 42쪽 · 프롬프트 45개 · 구매 즉시 다운로드 · 24,000원</p></div>
-  <div class="eb reveal">
-    <img class="cover" src="assets/img/ebook_cover.png" alt="전자책 표지">
-    <div>
-      <ul class="toc">
-        <li><span>1</span>전체 흐름</li><li><span>2</span>도구 지도: Higgsfield · Claude</li><li><span>3</span>Claude로 기획 · 프롬프트</li><li><span>4</span>레퍼런스 일관성 · 누끼 합성</li>
-        <li><span>5</span>시작 → 끝 프레임 영상</li><li><span>6</span>한글은 AI 밖에서</li><li><span>7</span>플랫폼별 비율</li><li><span>8</span>크레딧 예산</li>
-        <li><span>9</span>실패와 해결</li><li><span>10</span>상업적 이용 · 권리</li><li><span>11</span>프롬프트 라이브러리 45개</li><li><span>12</span>실전 예제 3가지</li>
-      </ul>
-      <div class="pv"><img src="assets/img/ebook_preview_03_p12.png" alt=""><img src="assets/img/ebook_preview_04_p17.png" alt=""><img src="assets/img/ebook_preview_06_p30.png" alt=""></div>
+  <div class="sv rv" style="margin-top:22px;grid-template-columns:1fr 2fr">
+    <a href="#more"><div class="im"><img src="assets/img/th_ebook.jpg" alt=""></div><div class="bd"><div><h3>AI 광고 숏폼 전자책</h3><p class="d">Higgsfield + Claude 실전 워크플로 · 42쪽</p></div><span class="p">24,000원</span></div></a>
+    <div style="border:1px solid var(--line);border-radius:14px;padding:34px;display:flex;flex-direction:column;justify-content:center">
+      <span class="k">For Teams</span>
+      <h3 style="font-size:26px;letter-spacing:-1px;margin:12px 0 10px">기업 AI 전략 · 구축은 HKx 컨설팅에서</h3>
+      <p style="color:var(--mute);font-size:15px;max-width:520px">LLM 에이전트, 데이터 파이프라인, 사내 AI 도입 프로젝트는 별도 상담으로 진행합니다.</p>
+      <div style="margin-top:22px"><a class="btn line" href="/">HKx 컨설팅 보기 →</a></div>
     </div>
   </div>
 </div></section>
 
-<section style="background:var(--paper)"><div class="wrap">
-  <div class="sh reveal"><div><span class="no">Process</span><h2>주문부터 납품까지<br><em>네 단계</em></h2></div><p>정해진 주문서로 받기 때문에 긴 상담 없이 바로 제작에 들어갑니다.</p></div>
-  <div class="steps reveal">
-    <div><b>주문서 접수</b><p>제품 사진 · 원하는 무드 · 사용처를 양식으로 받습니다.</p></div>
-    <div><b>AI 파이프라인 제작</b><p>서비스별 자동화 파이프라인이 초안을 만듭니다.</p></div>
-    <div><b>사람이 검수</b><p>라벨 · 로고 · 경계선 · 문구를 직접 확인하고 다듬습니다.</p></div>
-    <div><b>파일 납품</b><p>JPG · PNG · PSD · MP4 · PDF를 정리해 보내드립니다.</p></div>
+<section id="beauty"><div class="w">
+  <div class="sh rv"><div><span class="k">K-Beauty Design</span><h2><span>크몽에서 가장 많이 찾는</span><br>뷰티 디자인을 AI로</h2></div><p>크몽 랭킹 상위를 보면 화장품 연출 촬영(리뷰 1,417개) · 상세페이지(최대 132만 원) 수요가 크고, 뷰티 전문 광고소재는 공급이 비어 있습니다.</p></div>
+
+  <div class="feat rv">
+    <div class="ph"><img src="assets/img/hero.jpg" alt="" style="object-position:70% center"></div>
+    <div class="tx"><span class="k">01 · Product Cut</span><h3><span>촬영 없이</span><br>화장품 연출컷</h3><p>물결 · 원료 · 대리석 · 햇살 무드까지. 제품 형태와 라벨은 그대로 두고 장면만 바꿉니다.</p>
+      <ul><li><b>STANDARD</b><span>연출컷 3장 · 29,000원</span></li><li><b>DELUXE</b><span>연출 6 + 제형 2 · 59,000원</span></li><li><b>PREMIUM</b><span>연출 6 + 제형 3 + 모델 3 · 119,000원</span></li></ul></div>
   </div>
-  <div class="tools reveal"><span>Higgsfield<i>이미지 · 영상</i></span><span>Nano Banana Pro<i>연출컷</i></span><span>Kling 3.0<i>영상</i></span><span>Claude Code<i>파이프라인 · 카피</i></span><span>BiRefNet<i>누끼</i></span><span>Photoshop · Figma<i>편집</i></span><span>FFmpeg<i>인코딩</i></span></div>
+
+  <div class="dpwrap rv" style="margin-bottom:120px">
+    <div class="dpf"><img src="assets/img/detail_page.jpg" alt="상세페이지 샘플"></div>
+    <div><span class="k">02 · Detail Page</span><h3 style="font-size:clamp(28px,3.2vw,44px);line-height:1.16;font-weight:800;letter-spacing:-1.8px;margin:14px 0 18px"><span style="font-weight:200">기획부터 AI 연출컷까지</span><br>화장품 상세페이지</h3>
+      <p style="color:var(--mute);font-size:16px;max-width:460px">후킹 헤드 → 고민 공감 → 포인트 3 → 원료 → 제형 → 사용법 → 제품 정보. 효능 표현은 화장품 광고 기준에 맞게 순화해 제안합니다.</p>
+      <ul style="list-style:none;margin:26px 0 30px;border-top:1px solid var(--line);font-size:15px"><li style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line)"><b>STANDARD</b><span style="color:var(--mute)">5섹션 · 99,000원</span></li><li style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line)"><b>DELUXE</b><span style="color:var(--mute)">9섹션 + PSD · 190,000원</span></li><li style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line)"><b>PREMIUM</b><span style="color:var(--mute)">13섹션 + 광고소재 · 390,000원</span></li></ul></div>
+  </div>
+
+  <div class="feat r rv">
+    <div class="ph"><img src="assets/img/phone_ad.jpg" alt="" style="object-position:72% center"></div>
+    <div class="tx"><span class="k">03 · Ad Creative</span><h3><span>메타 · GFA 규격으로</span><br>뷰티 광고소재</h3><p>카피와 비주얼을 다르게 한 A/B 시안을 함께 드려 바로 테스트할 수 있습니다.</p>
+      <ul><li><b>STANDARD</b><span>1종 x 3규격 · 19,000원</span></li><li><b>DELUXE</b><span>3종 x 3규격 · 49,000원</span></li><li><b>PREMIUM</b><span>6종 x 4규격 + 카드뉴스 · 99,000원</span></li></ul></div>
+  </div>
+
+  <div class="feat rv" style="margin-bottom:0">
+    <div class="ph"><img src="assets/img/model.jpg" alt="" style="object-position:62% center"></div>
+    <div class="tx"><span class="k">04 · AI Model</span><h3><span>섭외 없이</span><br>AI 모델컷</h3><p>피부 결 · 모공까지 살아 있는 가상 모델 컷. 실존 인물을 닮게 만드는 요청은 받지 않습니다.</p></div>
+  </div>
 </div></section>
 
-<section id="about"><div class="wrap">
-  <div class="sh reveal"><div><span class="no">About</span><h2>Harry Kang<br><em>강상인</em></h2></div></div>
-  <div class="about">
-    <div class="reveal">
-      <p class="big">NYU에서 <em>Computer Science</em>를 전공하며 AI를 공부했고, Scale.AI를 거쳐 CES 수상 프로젝트들을 이끌었습니다. 지금은 <em>HKx AI Solutions</em>를 운영하며 K-뷰티 커머스 현장에서 AI 마케팅 이미지 · 영상을 만들고 있습니다.</p>
-      <div class="hl3"><div><div class="n">NYU</div><div class="t">Computer Science · AI</div></div><div><div class="n">3×</div><div class="t">CES 수상</div></div><div><div class="n">AI</div><div class="t">LLM 에이전트 · 생성형 이미지 · 영상</div></div></div>
+<section id="video" class="dark"><div class="w">
+  <div class="sh rv"><div><span class="k">AI Video Ads</span><h2><span>사진 한 장이</span><br>광고 영상으로</h2></div><p>상품 사진 1장으로 만든 5초 1080p 세로 영상입니다. 한글 문구와 로고는 편집 단계에서 얹습니다.</p></div>
+  <div class="vids rv">
+    <figure><video src="assets/video/serum.mp4" autoplay muted loop playsinline></video><figcaption>뷰티 · 세럼</figcaption></figure>
+    <figure><video src="assets/video/coldbrew.mp4" autoplay muted loop playsinline></video><figcaption>푸드 · 콜드브루</figcaption></figure>
+    <figure><video src="assets/video/sneaker.mp4" autoplay muted loop playsinline></video><figcaption>패션 · 러닝화</figcaption></figure>
+  </div>
+  <div class="bts rv"><img src="assets/img/video_bts.jpg" alt=""></div>
+  <div class="pr rv">
+    <div><h4>STANDARD</h4><div class="n">39,000원</div><p>5초 1컷 · 9:16 · 2일</p></div>
+    <div><h4>DELUXE</h4><div class="n">79,000원</div><p>5초 2컷 + 한글 문구 · 9:16 + 1:1</p></div>
+    <div><h4>PREMIUM</h4><div class="n">149,000원</div><p>5초 3컷 + 로고 엔딩 · 3개 비율</p></div>
+  </div>
+</div></section>
+
+<section id="more"><div class="w">
+  <div class="feat rv">
+    <div class="ph"><img src="assets/img/nukki_split.jpg" alt=""></div>
+    <div class="tx"><span class="k">AI Cut-out</span><h3><span>누끼 · 배경제거</span><br>상품컷 정리</h3><p>마켓 규격 흰 배경 · 그림자 · 컬러 배경 버전까지 일괄 정리. 머리카락 · 유리병은 두 모델로 교차 검수합니다.</p>
+      <ul><li><b>STANDARD</b><span>5장 · 5,000원</span></li><li><b>DELUXE</b><span>20장 + 그림자 · 15,000원</span></li><li><b>PREMIUM</b><span>50장 · 30,000원</span></li></ul></div>
+  </div>
+  <div class="duo rv" style="margin:-80px 0 120px"><img src="assets/img/nukki_01_cosmetic.jpg" alt=""><img src="assets/img/nukki_05_hair.jpg" alt=""><img src="assets/img/nukki_06_glass.jpg" alt=""></div>
+
+  <div class="feat r rv">
+    <div class="ph"><img src="assets/img/saju.jpg" alt=""></div>
+    <div class="tx"><span class="k">Saju Report</span><h3><span>질문에 시기까지</span><br>사주 감정서 PDF</h3><p>직접 만든 명리 계산 엔진으로 원국 · 오행 · 대운 · 세운을 계산하고, 질문별 시기를 문서로 정리합니다.</p>
+      <ul><li><b>STANDARD</b><span>질문 1개 · 19,000원</span></li><li><b>DELUXE</b><span>질문 2개 · 39,000원</span></li><li><b>PREMIUM</b><span>인생 흐름 + 질문 2개 · 89,000원</span></li></ul>
+      <div class="pages"><img src="assets/img/saju_p01.jpg" alt=""><img src="assets/img/saju_p03.jpg" alt=""><img src="assets/img/saju_p05.jpg" alt=""></div></div>
+  </div>
+
+  <div class="feat rv" style="margin-bottom:0">
+    <div class="ph"><img src="assets/img/ebook_mock.jpg" alt=""></div>
+    <div class="tx"><span class="k">E-book</span><h3><span>이 페이지를 만든 방법</span><br>AI 숏폼 실전 워크플로</h3><p>Higgsfield와 Claude로 상품 이미지와 광고 영상을 만드는 과정. A4 42쪽 · 프롬프트 45개 · 구매 즉시 다운로드.</p>
+      <ul><li><b>PDF 전자책</b><span>24,000원</span></li></ul></div>
+  </div>
+</div></section>
+
+<section id="about" style="background:#fff"><div class="w">
+  <div class="ab">
+    <div class="rv"><span class="k">About</span>
+      <p class="big" style="margin-top:20px">NYU에서 <b>Computer Science</b>를 전공하며 AI를 공부했고, Scale.AI를 거쳐 <b>CES 수상</b> 프로젝트들을 이끌었습니다. 지금은 <b>HKx AI Solutions</b>를 운영하며 K-뷰티 커머스 현장에서 AI 비주얼을 만듭니다.</p>
+      <div class="stats"><div><div class="n">3×</div><div class="t">CES 수상</div></div><div><div class="n">NYU</div><div class="t">Computer Science</div></div><div><div class="n">AI</div><div class="t">LLM · 이미지 · 영상</div></div></div>
     </div>
-    <ul class="tl reveal">
-      <li><div class="y">2026 —</div><div class="r">Founder · HKx AI Solutions</div><div class="x">기업 AI 전략 · 구축, K-뷰티 AI 마케팅 비주얼, AI Studio 운영</div></li>
-      <li><div class="y">2025 – 2026</div><div class="r">CEO Staff / AI Strategic Coordinator · Waiker</div><div class="x">Nasdaq 공식 데이터 파트너십, 한국투자증권 ₩3억 ARR 데이터 계약</div></li>
-      <li><div class="y">2024 – 2025</div><div class="r">ML Ops Engineer · FirstHabit</div><div class="x">LangGraph 멀티 에이전트 · GraphRAG, CES 2026 Innovation Award · Chalk CES 2025 Honoree</div></li>
-      <li><div class="y">2024</div><div class="r">New York University · B.A.</div><div class="x">Computer Science</div></li>
-      <li><div class="y">2023 – 2024</div><div class="r">Undergraduate Researcher · NYU Courant</div><div class="x">시뮬레이션 알고리즘 최적화 연구</div></li>
-      <li><div class="y">2023</div><div class="r">SWE Intern · Scale.AI</div><div class="x">AI 컨설팅 그룹, 문서 처리 ETL 파이프라인</div></li>
+    <ul class="tl rv">
+      <li><span class="y">2026 —</span><div><div class="r">Founder · HKx AI Solutions</div><div class="x">기업 AI 전략 · 구축, K-뷰티 AI 비주얼</div></div></li>
+      <li><span class="y">2025 – 2026</span><div><div class="r">CEO Staff / AI Strategic Coordinator · Waiker</div><div class="x">Nasdaq 공식 데이터 파트너십 · ₩3억 ARR 계약</div></div></li>
+      <li><span class="y">2024 – 2025</span><div><div class="r">ML Ops Engineer · FirstHabit</div><div class="x">LangGraph 멀티 에이전트 · CES 2026 Innovation Award</div></div></li>
+      <li><span class="y">2024</span><div><div class="r">New York University</div><div class="x">B.A. Computer Science</div></div></li>
+      <li><span class="y">2023</span><div><div class="r">SWE Intern · Scale.AI</div><div class="x">AI 컨설팅 그룹, 문서 처리 파이프라인</div></div></li>
     </ul>
   </div>
 </div></section>
 
-<div class="contact" id="contact"><div class="wrap">
-  <h2>브랜드 비주얼,<br><span class="ko">촬영 없이</span> 시작하세요.</h2>
-  <p>바로 주문 가능한 서비스는 크몽에서, 기업 AI 전략 · 구축 프로젝트는 HKx 컨설팅으로 문의해 주세요.</p>
-  <div class="cta"><a class="btn dark" id="kmongLink" href="#" target="_blank" rel="noopener">크몽에서 주문하기 →</a><a class="btn line" href="/">HKx 컨설팅 상담</a><a class="btn line" id="mailLink" href="#">이메일 문의</a></div>
+<div class="cta-s" id="contact"><div class="bg"></div><div class="w">
+  <h2><span>브랜드 비주얼,</span><br>촬영 없이 시작하세요.</h2>
+  <p>바로 주문 가능한 서비스는 크몽에서, 기업 프로젝트는 HKx 컨설팅으로.</p>
+  <div class="row"><a class="btn solid" id="kmongLink" href="#" target="_blank" rel="noopener">크몽에서 주문하기 →</a><a class="btn ghost" href="/">HKx 컨설팅</a><a class="btn ghost" id="mailLink" href="#">이메일 문의</a></div>
 </div></div>
-
-<footer><div class="wrap"><span>© 2026 HKx AI Solutions · AI Studio</span><span>샘플 이미지 · 영상의 브랜드와 인물은 AI로 만든 가상이며 실존 브랜드 · 인물과 관계없습니다. 누끼 샘플 원본: Pexels.</span></div></footer>
+<footer><div class="w"><span>© 2026 HKx AI Solutions · AI Studio</span><span>샘플의 브랜드(LUMEA)와 인물은 AI로 만든 가상이며 실존 브랜드 · 인물과 관계없습니다.</span></div></footer>
 <div id="lb"><img alt=""></div>
 
 <script>
-const CONFIG = { kmong: "https://kmong.com/", email: "sik247@stern.nyu.edu" };
-document.getElementById('kmongLink').href = CONFIG.kmong;
-document.getElementById('mailLink').href = 'mailto:' + CONFIG.email + '?subject=' + encodeURIComponent('[AI Studio 문의]');
-function showPane(p){ document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on', b.dataset.p===p)); document.querySelectorAll('.pane').forEach(x=>x.classList.toggle('on', x.id==='p-'+p)); }
-document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>showPane(b.dataset.p)));
-document.querySelectorAll('[data-tab]').forEach(a=>a.addEventListener('click',()=>showPane(a.dataset.tab)));
-const lb=document.getElementById('lb'), lbi=lb.querySelector('img');
-document.querySelectorAll('.g3 img,.ng img,.pages img,.eb .pv img').forEach(i=>i.addEventListener('click',()=>{lbi.src=i.src;lb.classList.add('on');}));
-lb.addEventListener('click',()=>lb.classList.remove('on'));
-document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on');});
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.1});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-const vio=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;e.isIntersecting?v.play().catch(()=>{}):v.pause();}),{threshold:.2});
+const CONFIG={kmong:"https://kmong.com/",email:"sik247@stern.nyu.edu"};
+document.getElementById('kmongLink').href=CONFIG.kmong;
+document.getElementById('mailLink').href='mailto:'+CONFIG.email+'?subject='+encodeURIComponent('[AI Studio 문의]');
+const nav=document.getElementById('nav');const onS=()=>nav.classList.toggle('s',scrollY>window.innerHeight*.7);addEventListener('scroll',onS);onS();
+const lb=document.getElementById('lb'),lbi=lb.querySelector('img');
+document.querySelectorAll('.work figure img,.feat .ph img,.duo img,.pages img,.bts img,.camp img').forEach(i=>i.addEventListener('click',()=>{lbi.src=i.src;lb.classList.add('on')}));
+lb.addEventListener('click',()=>lb.classList.remove('on'));addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const vio=new IntersectionObserver(es=>es.forEach(e=>{e.isIntersecting?e.target.play().catch(()=>{}):e.target.pause()}),{threshold:.2});
 document.querySelectorAll('video').forEach(v=>vio.observe(v));
 </script>
 </body>
